@@ -111,20 +111,6 @@ def bat_12v_current(messages):
     return {"bat_12v_current": v}
 
 
-def quick_charges(messages):
-    """Decode Number of quick charges messages."""
-    d = messages[0].data  # only operate on a single message
-    v = int.from_bytes(d[3:5])
-    return {"quick_charges": v}
-
-
-def l1_l2_charges(messages):
-    """Decode Number of L1/L2 charges messages."""
-    d = messages[0].data  # only operate on a single message
-    v = int.from_bytes(d[3:5])
-    return {"l1_l2_charges": v}
-
-
 def ambient_temp(messages):
     """Decode ambient temperature messages."""
     d = messages[0].data  # only operate on a single message
@@ -192,14 +178,6 @@ def charge_mode(messages):
     return {"charge_mode": v}
 
 
-def rpm(messages):
-    """Decode Motor RPM messages."""
-    d = messages[0].data  # only operate on a single message
-    v = struct.unpack("!h", d[3:5])[0]
-    # todo: fix this parser
-    return {"rpm": v}
-
-
 def obc_out_power(messages):
     """Decode On-board charger output power messages (W)."""
     d = messages[0].data  # only operate on a single message
@@ -207,46 +185,11 @@ def obc_out_power(messages):
     return {"obc_out_power": v}
 
 
-def motor_power(messages):
-    """Decode Traction motor power messages (W)."""
-    d = messages[0].data  # only operate on a single message
-    v = struct.unpack("!h", d[3:5])[0] * 40
-    return {"motor_power": v}
-
-
-def speed(messages):
-    """Decode Vehicle speed messages (km/h)."""
-    d = messages[0].data  # only operate on a single message
-    v = struct.unpack("!h", d[3:5])[0] / 10
-    return {"speed": v}
-
-
 def ac_on(messages):
     """Decode AC status messages."""
     d = messages[0].data  # only operate on a single message
     v = d[3] == 0x01
     return {"ac_on": v}
-
-
-def rear_heater(messages):
-    """Decode Rear heater status messages."""
-    d = messages[0].data  # only operate on a single message
-    v = d[3] == 0xA2
-    return {"rear_heater": v}
-
-
-def eco_mode(messages):
-    """Decode ECO mode status messages."""
-    d = messages[0].data  # only operate on a single message
-    v = d[3] == 0x10 | d[3] == 0x11
-    return {"eco_mode": v}
-
-
-def e_pedal_mode(messages):
-    """Decode e-Pedal mode status messages."""
-    d = messages[0].data  # only operate on a single message
-    v = d[3] == 0x04
-    return {"e_pedal_mode": v}
 
 
 def odometer(messages):
@@ -297,17 +240,8 @@ def lbc(messages):
     d = messages[0].data
     if len(d) == 0:
         return None
-    hv_battery_current_1 = int.from_bytes(d[2:6], byteorder="big", signed=False)
-    hv_battery_current_2 = int.from_bytes(d[8:12], byteorder="big", signed=False)
-    if hv_battery_current_1 & 0x8000000 == 0x8000000:
-        hv_battery_current_1 = hv_battery_current_1 | -0x100000000
-    if hv_battery_current_2 & 0x8000000 == 0x8000000:
-        hv_battery_current_2 = hv_battery_current_2 | -0x100000000
     return {
         "state_of_charge": int.from_bytes(d[33:36]) / 10000,
         "hv_battery_health": int.from_bytes(d[30:32]) / 102.4,
-        "hv_battery_Ah": int.from_bytes(d[37:40]) / 10000,
-        "hv_battery_current_1": hv_battery_current_1 / 1024,
-        "hv_battery_current_2": hv_battery_current_2 / 1024,
         "hv_battery_voltage": int.from_bytes(d[20:22]) / 100,
     }

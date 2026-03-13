@@ -23,24 +23,6 @@ BINARY_SENSOR_TYPES: dict[str, BinarySensorEntityDescription] = {
         icon="mdi:air-conditioner",
         name="AC status",
     ),
-    "rear_heater": BinarySensorEntityDescription(
-        key="rear_heater",
-        # device_class=BinarySensorDeviceClass.POWER,
-        icon="mdi:heat-wave",
-        name="Rear heater status",
-    ),
-    "eco_mode": BinarySensorEntityDescription(
-        key="eco_mode",
-        # device_class=BinarySensorDeviceClass.POWER,
-        icon="mdi:sprout",
-        name="ECO mode status",
-    ),
-    "e_pedal_mode": BinarySensorEntityDescription(
-        key="e_pedal_mode",
-        # device_class=BinarySensorDeviceClass.POWER,
-        icon="mdi:bike-pedal",
-        name="e-Pedal mode status",
-    ),
 }
 
 
