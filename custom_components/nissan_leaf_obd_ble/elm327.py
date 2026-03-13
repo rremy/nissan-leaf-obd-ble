@@ -41,7 +41,6 @@ from .protocols.protocol import Message
 from .protocols.protocol_can import ISO_15765_4_11bit_500k
 
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.WARNING)
 
 
 class OBDStatus:
@@ -107,7 +106,7 @@ class ELM327:
     ):
         """Initialize ELM327."""
         uuids = [u.lower() for u in getattr(device, "metadata", {}).get("uuids", [])]
-        logger.warning(
+        logger.info(
             "Device metadata UUIDs: %s (raw metadata: %s)",
             uuids,
             getattr(device, "metadata", {})
@@ -141,7 +140,9 @@ class ELM327:
 
         # ------------- open port -------------
         try:
+            logger.debug("Connecting to BLE device %s", device.address)
             await self.__port.open()
+            logger.debug("BLE connection established with %s", device.address)
         except Exception as e:
             logger.warning("Failed to open BLE connection: %s", e)
             self.__port = None
@@ -198,6 +199,7 @@ class ELM327:
 
         # by now, we've successfully communicated with the ELM, but not the car
         self.__status = OBDStatus.ELM_CONNECTED
+        logger.debug("ELM327 initialized, status: %s", self.__status)
 
         # -------------------------- AT RV (read volt) ------------------------
         if check_voltage:
@@ -214,9 +216,11 @@ class ELM327:
                 return self
             # by now, we've successfully connected to the OBD socket
             self.__status = OBDStatus.OBD_CONNECTED
+            logger.debug("OBD socket connected, status: %s", self.__status)
 
         # try to communicate with the car, and load the correct protocol parser
         self.__status = OBDStatus.CAR_CONNECTED
+        logger.debug("Car connected, status: %s", self.__status)
         return self
 
     def __isok(self, lines, expectEcho=False):
@@ -308,10 +312,11 @@ class ELM327:
         self.__status = OBDStatus.NOT_CONNECTED
 
         if self.__port is not None:
-            logger.info("closing port")
+            logger.debug("Disconnecting BLE device")
             await self.__write(b"ATZ")
             await self.__port.close()
             self.__port = None
+            logger.debug("BLE device disconnected")
 
     #  -> list[Message]:
     async def send_and_parse(self, cmd) -> list[Message]:
@@ -333,8 +338,11 @@ class ELM327:
         if self.__low_power:
             await self.normal_power()
 
+        logger.debug("CAN TX: %s", cmd)
         lines = await self.__send(cmd)
-        return self.__protocol(lines)
+        messages = self.__protocol(lines)
+        logger.debug("CAN RX: %s", lines)
+        return messages
 
     async def __send(self, cmd, delay=None, end_marker=ELM_PROMPT):
         """Unprotected send() function.

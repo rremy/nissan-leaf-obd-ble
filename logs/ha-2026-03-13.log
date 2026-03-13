@@ -1,0 +1,446 @@
+2026-03-13 21:33:42.641 INFO (MainThread) [custom_components.nissan_leaf_obd_ble] 
+-------------------------------------------------------------------
+Nissan Leaf OBD BLE
+Version: 0.1.0
+This is a custom integration!
+If you have any issues with this you need to open an issue here:
+https://github.com/pbutterworth/nissan-leaf-obd-ble/issues
+-------------------------------------------------------------------
+2026-03-13 21:33:42.648 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.coordinator] Check if the device is still available to connect
+2026-03-13 21:33:42.648 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Connecting to BLEDevice
+2026-03-13 21:33:42.648 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Device metadata UUIDs: [] (raw metadata: {})
+2026-03-13 21:33:42.648 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Initializing ELM327: PROTOCOL=('6',)
+2026-03-13 21:33:42.649 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Connecting to BLE device AA:BB:CC:12:22:33
+2026-03-13 21:33:56.675 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] BLE connection established with AA:BB:CC:12:22:33
+2026-03-13 21:33:56.675 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATZ\r'
+2026-03-13 21:33:56.775 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] wait: 1 seconds
+2026-03-13 21:33:57.776 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'\xfc\r\rELM327 v1.5\r\r>'
+2026-03-13 21:33:57.776 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATE0\r'
+2026-03-13 21:33:57.906 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'ATE0\rOK\r\r>'
+2026-03-13 21:33:57.906 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATSP6\r'
+2026-03-13 21:33:58.014 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.015 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATH1\r'
+2026-03-13 21:33:58.102 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.102 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATL0\r'
+2026-03-13 21:33:58.203 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.204 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATS0\r'
+2026-03-13 21:33:58.316 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.317 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATCAF0\r'
+2026-03-13 21:33:58.418 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.419 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] ELM327 initialized, status: ELM Connected
+2026-03-13 21:33:58.419 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT RV\r'
+2026-03-13 21:33:58.522 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'14.2V\r\r>'
+2026-03-13 21:33:58.523 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] OBD socket connected, status: OBD Connected
+2026-03-13 21:33:58.523 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Car connected, status: Car Connected
+2026-03-13 21:33:58.523 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT SH 797 '
+2026-03-13 21:33:58.525 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT SH 797 \r'
+2026-03-13 21:33:58.632 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.632 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:33:58.632 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SH 797 '
+2026-03-13 21:33:58.632 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SH 797 \r'
+2026-03-13 21:33:58.718 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.718 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:33:58.718 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SD 30 00 00'
+2026-03-13 21:33:58.718 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SD 30 00 00\r'
+2026-03-13 21:33:58.821 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.821 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:33:58.822 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SM 1'
+2026-03-13 21:33:58.822 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SM 1\r'
+2026-03-13 21:33:58.942 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:33:58.942 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:33:58.942 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'7970210C0': Mystery command
+2026-03-13 21:33:58.943 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'0210C0'
+2026-03-13 21:33:58.943 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'0210C0\r'
+2026-03-13 21:33:59.239 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0250C00000000000\r\r>'
+2026-03-13 21:33:59.239 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0250C00000000000']
+2026-03-13 21:33:59.239 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0250C00000000000
+2026-03-13 21:33:59.240 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221304': Power switch status
+2026-03-13 21:33:59.240 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221304'
+2026-03-13 21:33:59.240 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221304\r'
+2026-03-13 21:33:59.558 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0562130480BC0000\r\r>'
+2026-03-13 21:33:59.558 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0562130480BC0000']
+2026-03-13 21:33:59.558 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0562130480BC0000
+2026-03-13 21:33:59.558 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221156': Gear position
+2026-03-13 21:33:59.559 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221156'
+2026-03-13 21:33:59.559 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221156\r'
+2026-03-13 21:33:59.844 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115601000000\r\r>'
+2026-03-13 21:33:59.844 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115601000000']
+2026-03-13 21:33:59.844 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115601000000
+2026-03-13 21:33:59.844 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221103': 12V battery voltage
+2026-03-13 21:33:59.844 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221103'
+2026-03-13 21:33:59.844 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221103\r'
+2026-03-13 21:34:00.159 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A04621103B3000000\r\r>'
+2026-03-13 21:34:00.159 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A04621103B3000000']
+2026-03-13 21:34:00.160 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A04621103B3000000
+2026-03-13 21:34:00.160 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221183': 12V battery current
+2026-03-13 21:34:00.160 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221183'
+2026-03-13 21:34:00.160 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221183\r'
+2026-03-13 21:34:00.358 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A05621183029C0000\r\r>'
+2026-03-13 21:34:00.358 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A05621183029C0000']
+2026-03-13 21:34:00.358 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A05621183029C0000
+2026-03-13 21:34:00.358 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'7970322115d': Ambient temperature
+2026-03-13 21:34:00.358 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'0322115d'
+2026-03-13 21:34:00.358 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'0322115d\r'
+2026-03-13 21:34:00.570 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115D64000000\r\r>'
+2026-03-13 21:34:00.570 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115D64000000']
+2026-03-13 21:34:00.570 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115D64000000
+2026-03-13 21:34:00.571 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221261': Estimated AC system power
+2026-03-13 21:34:00.571 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221261'
+2026-03-13 21:34:00.571 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221261\r'
+2026-03-13 21:34:00.767 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462126100000000\r\r>'
+2026-03-13 21:34:00.767 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462126100000000']
+2026-03-13 21:34:00.767 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462126100000000
+2026-03-13 21:34:00.767 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221262': Estimated PTC system power
+2026-03-13 21:34:00.767 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221262'
+2026-03-13 21:34:00.767 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221262\r'
+2026-03-13 21:34:00.910 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462126202000000\r\r>'
+2026-03-13 21:34:00.910 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462126202000000']
+2026-03-13 21:34:00.910 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462126202000000
+2026-03-13 21:34:00.910 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221152': Auxiliary equipment power
+2026-03-13 21:34:00.911 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221152'
+2026-03-13 21:34:00.911 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221152\r'
+2026-03-13 21:34:01.081 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115204000000\r\r>'
+2026-03-13 21:34:01.082 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115204000000']
+2026-03-13 21:34:01.082 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115204000000
+2026-03-13 21:34:01.082 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221151': AC system power
+2026-03-13 21:34:01.082 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221151'
+2026-03-13 21:34:01.082 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221151\r'
+2026-03-13 21:34:01.281 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115102000000\r\r>'
+2026-03-13 21:34:01.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115102000000']
+2026-03-13 21:34:01.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115102000000
+2026-03-13 21:34:01.282 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221234': Plug state of J1772 socket
+2026-03-13 21:34:01.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221234'
+2026-03-13 21:34:01.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221234\r'
+2026-03-13 21:34:01.490 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462123400000000\r\r>'
+2026-03-13 21:34:01.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462123400000000']
+2026-03-13 21:34:01.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462123400000000
+2026-03-13 21:34:01.491 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'7970322114e': Charging mode
+2026-03-13 21:34:01.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'0322114e'
+2026-03-13 21:34:01.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'0322114e\r'
+2026-03-13 21:34:01.694 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462114E00000000\r\r>'
+2026-03-13 21:34:01.695 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462114E00000000']
+2026-03-13 21:34:01.695 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462114E00000000
+2026-03-13 21:34:01.695 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221236': On-board charger output power
+2026-03-13 21:34:01.695 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221236'
+2026-03-13 21:34:01.695 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221236\r'
+2026-03-13 21:34:01.904 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0562123600000000\r\r>'
+2026-03-13 21:34:01.905 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0562123600000000']
+2026-03-13 21:34:01.905 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0562123600000000
+2026-03-13 21:34:01.905 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221106': AC status
+2026-03-13 21:34:01.905 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221106'
+2026-03-13 21:34:01.905 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221106\r'
+2026-03-13 21:34:02.097 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0562110600B00000\r\r>'
+2026-03-13 21:34:02.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0562110600B00000']
+2026-03-13 21:34:02.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0562110600B00000
+2026-03-13 21:34:02.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT SH 743 '
+2026-03-13 21:34:02.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT SH 743 \r'
+2026-03-13 21:34:02.225 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:02.225 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:02.225 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SH 743 '
+2026-03-13 21:34:02.225 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SH 743 \r'
+2026-03-13 21:34:02.319 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:02.320 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:02.320 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SD 30 00 00'
+2026-03-13 21:34:02.320 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SD 30 00 00\r'
+2026-03-13 21:34:02.416 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:02.416 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:02.416 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SM 1'
+2026-03-13 21:34:02.416 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SM 1\r'
+2026-03-13 21:34:02.517 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:02.518 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:02.518 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e01': Total odometer reading (km)
+2026-03-13 21:34:02.518 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e01'
+2026-03-13 21:34:02.518 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e01\r'
+2026-03-13 21:34:02.719 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:34:02.719 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:34:02.719 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:34:02.719 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<6). Padded message: bytearray(b'\x7f"\x11\x00\x00\x00')
+2026-03-13 21:34:02.719 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e25': Tyre pressure front right
+2026-03-13 21:34:02.720 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e25'
+2026-03-13 21:34:02.720 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e25\r'
+2026-03-13 21:34:02.935 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:34:02.935 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:34:02.935 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:34:02.935 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:34:02.935 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e26': Tyre pressure front left
+2026-03-13 21:34:02.935 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e26'
+2026-03-13 21:34:02.935 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e26\r'
+2026-03-13 21:34:03.128 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:34:03.128 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:34:03.128 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:34:03.128 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:34:03.129 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e27': Tyre pressure rear right
+2026-03-13 21:34:03.129 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e27'
+2026-03-13 21:34:03.129 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e27\r'
+2026-03-13 21:34:03.342 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:34:03.342 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:34:03.342 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:34:03.342 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:34:03.342 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e28': Tyre pressure rear left
+2026-03-13 21:34:03.343 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e28'
+2026-03-13 21:34:03.343 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e28\r'
+2026-03-13 21:34:03.535 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:34:03.536 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:34:03.536 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:34:03.536 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:34:03.536 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e24': Remaining range (km)
+2026-03-13 21:34:03.536 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e24'
+2026-03-13 21:34:03.536 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e24\r'
+2026-03-13 21:34:03.731 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:34:03.732 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:34:03.732 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:34:03.732 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<13). Padded message: bytearray(b'\x7f"\x11\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2026-03-13 21:34:03.732 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT SH 79B '
+2026-03-13 21:34:03.732 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT SH 79B \r'
+2026-03-13 21:34:03.839 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:03.840 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:03.840 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SH 79B '
+2026-03-13 21:34:03.840 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SH 79B \r'
+2026-03-13 21:34:03.950 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:03.950 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:03.950 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SD 30 00 00'
+2026-03-13 21:34:03.950 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SD 30 00 00\r'
+2026-03-13 21:34:04.052 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:04.052 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:04.052 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SM 1'
+2026-03-13 21:34:04.053 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SM 1\r'
+2026-03-13 21:34:04.157 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:04.158 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:04.158 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79B022101': Li-ion battery controller
+2026-03-13 21:34:04.158 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'022101'
+2026-03-13 21:34:04.158 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'022101\r'
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'7BB10296101FFFFF97A\r7BB21028BFFFFF71AFF\r7BB22FFFFFF08CC2AF8\r7BB239380385B038A00\r7BB245C16C300081185\r7BB250007496D800005\r\r>'
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['7BB10296101FFFFF97A', '7BB21028BFFFFF71AFF', '7BB22FFFFFF08CC2AF8', '7BB239380385B038A00', '7BB245C16C300081185', '7BB250007496D800005']
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB10296101FFFFF97A
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB21028BFFFFF71AFF
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB22FFFFFF08CC2AF8
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB239380385B038A00
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB245C16C300081185
+2026-03-13 21:34:04.361 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB250007496D800005
+2026-03-13 21:34:04.362 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (41<53). Padded message: bytearray(b'a\x01\xff\xff\xf9z\x02\x8b\xff\xff\xf7\x1a\xff\xff\xff\xff\x08\xcc*\xf8\x93\x808[\x03\x8a\x00\\\x16\xc3\x00\x08\x11\x85\x00\x07Im\x80\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2026-03-13 21:34:04.362 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble] Returning data: {'power_switch': True, 'gear_position': 'Park', 'bat_12v_voltage': 14.32, 'bat_12v_current': 2.609375, 'ambient_temp': 10.0, 'estimated_ac_power': 0, 'estimated_ptc_power': 500, 'aux_power': 400, 'ac_power': 500, 'plug_state': 'Not plugged', 'charge_mode': 'Not charging', 'obc_out_power': 0, 'ac_on': False, 'odometer': 0, 'tp_fr': 0.0, 'tp_fl': 0.0, 'tp_rr': 0.0, 'tp_rl': 0.0, 'range_remaining': 0.0, 'state_of_charge': 871.6295, 'hv_battery_health': 0.078125, 'hv_battery_voltage': 377.6}
+2026-03-13 21:34:04.362 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Closing connection
+2026-03-13 21:34:04.362 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Disconnecting BLE device
+2026-03-13 21:34:04.362 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATZ\r'
+2026-03-13 21:34:04.565 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] BLE device disconnected
+2026-03-13 21:34:04.565 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.coordinator] Car is on, polling: interval = 0:00:10
+2026-03-13 21:34:04.567 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.coordinator] Finished fetching nissan_leaf_obd_ble data in 21.919 seconds (success: True)
+2026-03-13 21:34:04.578 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble] New service_info: <BluetoothServiceInfoBleak name=obdii address=AA:BB:CC:12:22:33 rssi=-89 manufacturer_data={} service_data={} service_uuids=['0000fff0-0000-1000-8000-00805f9b34fb'] source=F8:B3:B7:1B:45:7A connectable=True time=2858454.260054851 tx_power=0 raw=b'\x03\x19@\x02\x02\x01\x05\x02\n\x00\x03\x03\xf0\xff\x06\tobdii\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'> - BluetoothChange.ADVERTISEMENT
+2026-03-13 21:34:04.578 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.coordinator] Check if the device is still available to connect
+2026-03-13 21:34:04.578 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Connecting to BLEDevice
+2026-03-13 21:34:04.578 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Device metadata UUIDs: [] (raw metadata: {})
+2026-03-13 21:34:04.578 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Initializing ELM327: PROTOCOL=('6',)
+2026-03-13 21:34:04.578 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Connecting to BLE device AA:BB:CC:12:22:33
+2026-03-13 21:34:46.979 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] BLE connection established with AA:BB:CC:12:22:33
+2026-03-13 21:34:46.980 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATZ\r'
+2026-03-13 21:34:47.059 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] wait: 1 seconds
+2026-03-13 21:34:48.060 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'ATZ\r\xfc\r\rELM327 v1.5\r\r>'
+2026-03-13 21:34:48.060 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATE0\r'
+2026-03-13 21:34:48.386 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'ATE0\rOK\r\r>'
+2026-03-13 21:34:48.386 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATSP6\r'
+2026-03-13 21:34:48.697 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:48.697 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATH1\r'
+2026-03-13 21:34:48.832 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:48.832 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATL0\r'
+2026-03-13 21:34:49.004 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:49.004 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATS0\r'
+2026-03-13 21:34:49.205 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:49.206 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATCAF0\r'
+2026-03-13 21:34:49.312 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:49.313 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] ELM327 initialized, status: ELM Connected
+2026-03-13 21:34:49.313 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT RV\r'
+2026-03-13 21:34:49.506 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'14.2V\r\r>'
+2026-03-13 21:34:49.506 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] OBD socket connected, status: OBD Connected
+2026-03-13 21:34:49.506 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Car connected, status: Car Connected
+2026-03-13 21:34:49.506 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT SH 797 '
+2026-03-13 21:34:49.506 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT SH 797 \r'
+2026-03-13 21:34:49.650 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:49.650 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:49.650 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SH 797 '
+2026-03-13 21:34:49.650 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SH 797 \r'
+2026-03-13 21:34:49.834 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:49.834 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:49.834 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SD 30 00 00'
+2026-03-13 21:34:49.835 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SD 30 00 00\r'
+2026-03-13 21:34:49.957 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:49.957 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:49.957 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SM 1'
+2026-03-13 21:34:49.957 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SM 1\r'
+2026-03-13 21:34:50.230 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:50.231 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:50.231 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'7970210C0': Mystery command
+2026-03-13 21:34:50.231 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'0210C0'
+2026-03-13 21:34:50.231 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'0210C0\r'
+2026-03-13 21:34:50.657 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0250C00000000000\r\r>'
+2026-03-13 21:34:50.657 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0250C00000000000']
+2026-03-13 21:34:50.657 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0250C00000000000
+2026-03-13 21:34:50.658 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221304': Power switch status
+2026-03-13 21:34:50.658 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221304'
+2026-03-13 21:34:50.658 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221304\r'
+2026-03-13 21:34:50.980 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0562130480BC0000\r\r>'
+2026-03-13 21:34:50.980 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0562130480BC0000']
+2026-03-13 21:34:50.980 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0562130480BC0000
+2026-03-13 21:34:50.980 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221156': Gear position
+2026-03-13 21:34:50.980 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221156'
+2026-03-13 21:34:50.980 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221156\r'
+2026-03-13 21:34:51.277 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115601000000\r\r>'
+2026-03-13 21:34:51.277 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115601000000']
+2026-03-13 21:34:51.277 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115601000000
+2026-03-13 21:34:51.277 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221103': 12V battery voltage
+2026-03-13 21:34:51.277 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221103'
+2026-03-13 21:34:51.278 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221103\r'
+2026-03-13 21:34:51.663 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A04621103B3000000\r\r>'
+2026-03-13 21:34:51.663 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A04621103B3000000']
+2026-03-13 21:34:51.664 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A04621103B3000000
+2026-03-13 21:34:51.664 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221183': 12V battery current
+2026-03-13 21:34:51.664 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221183'
+2026-03-13 21:34:51.664 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221183\r'
+2026-03-13 21:34:51.878 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0562118302BA0000\r\r>'
+2026-03-13 21:34:51.878 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0562118302BA0000']
+2026-03-13 21:34:51.878 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0562118302BA0000
+2026-03-13 21:34:51.878 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'7970322115d': Ambient temperature
+2026-03-13 21:34:51.878 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'0322115d'
+2026-03-13 21:34:51.878 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'0322115d\r'
+2026-03-13 21:34:52.191 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115D64000000\r\r>'
+2026-03-13 21:34:52.191 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115D64000000']
+2026-03-13 21:34:52.191 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115D64000000
+2026-03-13 21:34:52.191 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221261': Estimated AC system power
+2026-03-13 21:34:52.191 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221261'
+2026-03-13 21:34:52.192 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221261\r'
+2026-03-13 21:34:52.411 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462126100000000\r\r>'
+2026-03-13 21:34:52.411 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462126100000000']
+2026-03-13 21:34:52.411 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462126100000000
+2026-03-13 21:34:52.411 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221262': Estimated PTC system power
+2026-03-13 21:34:52.411 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221262'
+2026-03-13 21:34:52.411 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221262\r'
+2026-03-13 21:34:52.597 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462126202000000\r\r>'
+2026-03-13 21:34:52.597 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462126202000000']
+2026-03-13 21:34:52.597 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462126202000000
+2026-03-13 21:34:52.597 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221152': Auxiliary equipment power
+2026-03-13 21:34:52.597 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221152'
+2026-03-13 21:34:52.598 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221152\r'
+2026-03-13 21:34:52.781 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115204000000\r\r>'
+2026-03-13 21:34:52.781 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115204000000']
+2026-03-13 21:34:52.781 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115204000000
+2026-03-13 21:34:52.782 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221151': AC system power
+2026-03-13 21:34:52.782 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221151'
+2026-03-13 21:34:52.782 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221151\r'
+2026-03-13 21:34:53.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462115102000000\r\r>'
+2026-03-13 21:34:53.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462115102000000']
+2026-03-13 21:34:53.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462115102000000
+2026-03-13 21:34:53.098 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221234': Plug state of J1772 socket
+2026-03-13 21:34:53.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221234'
+2026-03-13 21:34:53.098 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221234\r'
+2026-03-13 21:34:53.402 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462123400000000\r\r>'
+2026-03-13 21:34:53.402 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462123400000000']
+2026-03-13 21:34:53.402 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462123400000000
+2026-03-13 21:34:53.402 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'7970322114e': Charging mode
+2026-03-13 21:34:53.402 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'0322114e'
+2026-03-13 21:34:53.402 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'0322114e\r'
+2026-03-13 21:34:53.613 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0462114E00000000\r\r>'
+2026-03-13 21:34:53.613 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0462114E00000000']
+2026-03-13 21:34:53.613 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0462114E00000000
+2026-03-13 21:34:53.614 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221236': On-board charger output power
+2026-03-13 21:34:53.614 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221236'
+2026-03-13 21:34:53.614 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221236\r'
+2026-03-13 21:34:58.636 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0562123600000000\r\r>'
+2026-03-13 21:34:58.637 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0562123600000000']
+2026-03-13 21:34:58.637 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0562123600000000
+2026-03-13 21:34:58.637 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79703221106': AC status
+2026-03-13 21:34:58.637 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03221106'
+2026-03-13 21:34:58.637 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03221106\r'
+2026-03-13 21:34:58.828 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'79A0562110600B50000\r\r>'
+2026-03-13 21:34:58.828 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['79A0562110600B50000']
+2026-03-13 21:34:58.828 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 79A0562110600B50000
+2026-03-13 21:34:58.829 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT SH 743 '
+2026-03-13 21:34:58.829 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT SH 743 \r'
+2026-03-13 21:34:58.932 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:58.932 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:58.932 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SH 743 '
+2026-03-13 21:34:58.932 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SH 743 \r'
+2026-03-13 21:34:59.043 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:59.044 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:59.044 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SD 30 00 00'
+2026-03-13 21:34:59.044 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SD 30 00 00\r'
+2026-03-13 21:34:59.247 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:59.248 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:59.248 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SM 1'
+2026-03-13 21:34:59.248 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SM 1\r'
+2026-03-13 21:34:59.363 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:34:59.363 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:34:59.363 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e01': Total odometer reading (km)
+2026-03-13 21:34:59.363 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e01'
+2026-03-13 21:34:59.363 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e01\r'
+2026-03-13 21:35:04.648 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:35:04.649 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:35:04.649 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:35:04.649 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<6). Padded message: bytearray(b'\x7f"\x11\x00\x00\x00')
+2026-03-13 21:35:04.649 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e25': Tyre pressure front right
+2026-03-13 21:35:04.649 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e25'
+2026-03-13 21:35:04.649 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e25\r'
+2026-03-13 21:35:04.876 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:35:04.877 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:35:04.877 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:35:04.877 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:35:04.877 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e26': Tyre pressure front left
+2026-03-13 21:35:04.877 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e26'
+2026-03-13 21:35:04.877 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e26\r'
+2026-03-13 21:35:05.095 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:35:05.095 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:35:05.095 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:35:05.095 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:35:05.095 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e27': Tyre pressure rear right
+2026-03-13 21:35:05.095 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e27'
+2026-03-13 21:35:05.096 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e27\r'
+2026-03-13 21:35:05.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:35:05.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:35:05.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:35:05.282 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:35:05.283 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e28': Tyre pressure rear left
+2026-03-13 21:35:05.283 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e28'
+2026-03-13 21:35:05.283 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e28\r'
+2026-03-13 21:35:05.490 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:35:05.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:35:05.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:35:05.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<4). Padded message: bytearray(b'\x7f"\x11\x00')
+2026-03-13 21:35:05.491 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'74303220e24': Remaining range (km)
+2026-03-13 21:35:05.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'03220e24'
+2026-03-13 21:35:05.491 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'03220e24\r'
+2026-03-13 21:35:05.701 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'763037F2211FFFFFFFF\r\r>'
+2026-03-13 21:35:05.702 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['763037F2211FFFFFFFF']
+2026-03-13 21:35:05.702 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 763037F2211FFFFFFFF
+2026-03-13 21:35:05.702 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (3<13). Padded message: bytearray(b'\x7f"\x11\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2026-03-13 21:35:05.702 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT SH 79B '
+2026-03-13 21:35:05.702 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT SH 79B \r'
+2026-03-13 21:35:05.811 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:35:05.811 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:35:05.811 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SH 79B '
+2026-03-13 21:35:05.811 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SH 79B \r'
+2026-03-13 21:35:05.935 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:35:05.936 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:35:05.936 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SD 30 00 00'
+2026-03-13 21:35:05.936 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SD 30 00 00\r'
+2026-03-13 21:35:06.112 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:35:06.112 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:35:06.112 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'AT FC SM 1'
+2026-03-13 21:35:06.112 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'AT FC SM 1\r'
+2026-03-13 21:35:06.313 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'OK\r\r>'
+2026-03-13 21:35:06.313 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['OK']
+2026-03-13 21:35:06.314 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Sending command: b'79B022101': Li-ion battery controller
+2026-03-13 21:35:06.314 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN TX: b'022101'
+2026-03-13 21:35:06.314 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'022101\r'
+2026-03-13 21:35:06.520 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] read: b'7BB10296101FFFFFD68\r7BB21028BFFFFFA49FF\r7BB22FFFFFF08CC2AF8\r7BB23937E3837038A00\r7BB245C16C300080D8E\r\r>'
+2026-03-13 21:35:06.520 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] CAN RX: ['7BB10296101FFFFFD68', '7BB21028BFFFFFA49FF', '7BB22FFFFFF08CC2AF8', '7BB23937E3837038A00', '7BB245C16C300080D8E']
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB10296101FFFFFD68
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB21028BFFFFFA49FF
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB22FFFFFF08CC2AF8
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB23937E3837038A00
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Received frame: 7BB245C16C300080D8E
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.OBDCommand] Message was shorter than expected (34<53). Padded message: bytearray(b'a\x01\xff\xff\xfdh\x02\x8b\xff\xff\xfaI\xff\xff\xff\xff\x08\xcc*\xf8\x93~87\x03\x8a\x00\\\x16\xc3\x00\x08\r\x8e\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble] Returning data: {'power_switch': True, 'gear_position': 'Park', 'bat_12v_voltage': 14.32, 'bat_12v_current': 2.7265625, 'ambient_temp': 10.0, 'estimated_ac_power': 0, 'estimated_ptc_power': 500, 'aux_power': 400, 'ac_power': 500, 'plug_state': 'Not plugged', 'charge_mode': 'Not charging', 'obc_out_power': 0, 'ac_on': False, 'odometer': 0, 'tp_fr': 0.0, 'tp_fl': 0.0, 'tp_rr': 0.0, 'tp_rl': 0.0, 'range_remaining': 0.0, 'state_of_charge': 930.6112, 'hv_battery_health': 0.078125, 'hv_battery_voltage': 377.58}
+2026-03-13 21:35:06.521 INFO (MainThread) [custom_components.nissan_leaf_obd_ble.obd] Closing connection
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] Disconnecting BLE device
+2026-03-13 21:35:06.521 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] write: b'ATZ\r'
+2026-03-13 21:35:06.718 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.elm327] BLE device disconnected
+2026-03-13 21:35:06.718 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.coordinator] Car is on, polling: interval = 0:00:10
+2026-03-13 21:35:06.718 DEBUG (MainThread) [custom_components.nissan_leaf_obd_ble.coordinator] Finished fetching nissan_leaf_obd_ble data in 62.140 seconds (success: True)
