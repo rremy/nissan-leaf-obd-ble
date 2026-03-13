@@ -20,14 +20,13 @@ from .const import DOMAIN
 # Some OBD-II dongles, such as the Veepeak BLE model, do not use the
 # "OBDBLE" prefix in their Bluetooth name.  Include them here so that the
 # integration can discover and select them without manual intervention.
-LOCAL_NAMES = {"OBDBLE", "VEEPEAK"}
+LOCAL_NAMES = {"OBDBLE", "VEEPEAK", "ODBII"}
 
 
 class NissanLeafObdBleFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
     """Config flow handler."""
 
     VERSION = 1
-    CONNECTION_CLASS = config_entries.CONN_CLASS_LOCAL_POLL
 
     def __init__(self) -> None:
         """Initialize."""
@@ -41,7 +40,7 @@ class NissanLeafObdBleFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         config_entry: config_entries.ConfigEntry,
     ) -> config_entries.OptionsFlow:
         """Return the options flow."""
-        return NissanLeafObdBleOptionsFlowHandler(config_entry)
+        return NissanLeafObdBleOptionsFlowHandler()
 
     async def async_step_bluetooth(
         self, discovery_info: BluetoothServiceInfoBleak
@@ -115,42 +114,33 @@ class NissanLeafObdBleFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
 class NissanLeafObdBleOptionsFlowHandler(config_entries.OptionsFlow):
     """Config flow options handler for nissan_leaf_obd_ble."""
 
-    def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
-        """Initialize options flow."""
-        self.config_entry = config_entry
-        self.options = dict(config_entry.options)
-
     async def async_step_init(
         self, user_input: dict[str, Any] | None = None
     ) -> FlowResult:
         """Manage the options."""
+        options = self.config_entry.options
 
         if user_input is not None:
-            self.options.update(user_input)
-            return await self._update_options()
+            return self.async_create_entry(
+                title=self.config_entry.data.get(CONF_ADDRESS), data=user_input
+            )
 
         return self.async_show_form(
             step_id="init",
             data_schema=vol.Schema(
                 {
                     vol.Required(
-                        "cache_values", default=self.options.get("cache_values", False)
+                        "cache_values", default=options.get("cache_values", False)
                     ): bool,
                     vol.Required(
-                        "fast_poll", default=self.options.get("fast_poll", 10)
+                        "fast_poll", default=options.get("fast_poll", 10)
                     ): int,
                     vol.Required(
-                        "slow_poll", default=self.options.get("slow_poll", 300)
+                        "slow_poll", default=options.get("slow_poll", 300)
                     ): int,
                     vol.Required(
-                        "xs_poll", default=self.options.get("xs_poll", 3600)
+                        "xs_poll", default=options.get("xs_poll", 3600)
                     ): int,
                 }
             ),
-        )
-
-    async def _update_options(self):
-        """Update config entry options."""
-        return self.async_create_entry(
-            title=self.config_entry.data.get(CONF_ADDRESS), data=self.options
         )

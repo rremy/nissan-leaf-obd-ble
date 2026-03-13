@@ -106,7 +106,12 @@ class ELM327:
         start_low_power=False,
     ):
         """Initialize ELM327."""
-        uuids = [u.lower() for u in (device.metadata or {}).get("uuids", [])]
+        uuids = [u.lower() for u in getattr(device, "metadata", {}).get("uuids", [])]
+        logger.warning(
+            "Device metadata UUIDs: %s (raw metadata: %s)",
+            uuids,
+            getattr(device, "metadata", {})
+        )
 
         service_uuid = cls.SERVICE_UUID
         characteristic_uuid_read = cls.CHARACTERISTIC_UUID_READ
@@ -137,10 +142,9 @@ class ELM327:
         # ------------- open port -------------
         try:
             await self.__port.open()
-        except Exception:
-            logger.warning(
-                "An error occurred: %s", ("auto" if protocol is None else protocol,)
-            )
+        except Exception as e:
+            logger.warning("Failed to open BLE connection: %s", e)
+            self.__port = None
             return self
 
         # If we start with the IC in the low power state we need to wake it up
@@ -370,8 +374,9 @@ class ELM327:
             except Exception as e:
                 logger.critical("Device disconnected while writing: %s", e)
                 self.__status = OBDStatus.NOT_CONNECTED
-                await self.__port.close()
-                self.__port = None
+                if self.__port is not None:
+                    await self.__port.close()
+                    self.__port = None
                 return
         else:
             logger.info("cannot perform __write() when unconnected")
@@ -395,8 +400,9 @@ class ELM327:
                 data = await self.__port.read(self.__port.in_waiting or 1)
             except Exception:
                 self.__status = OBDStatus.NOT_CONNECTED
-                await self.__port.close()
-                self.__port = None
+                if self.__port is not None:
+                    await self.__port.close()
+                    self.__port = None
                 logger.critical("Device disconnected while reading")
                 return []
 

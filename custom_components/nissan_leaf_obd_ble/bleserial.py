@@ -5,6 +5,7 @@ import logging
 
 from bleak import BleakClient, BleakError
 from bleak.backends.device import BLEDevice
+from bleak_retry_connector import establish_connection
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.WARNING)
@@ -90,14 +91,49 @@ class bleserial:
 
     async def open(self):
         """Open the port."""
-        self.client = BleakClient(self.device)
         try:
             logger.debug("Connecting to device: %s", self.device)
-            await self.client.connect()
+            self.client = await establish_connection(
+                BleakClient, self.device, self.device.address
+            )
             logger.debug("Connected to device: %s", self.device)
 
-            services = await self.client.get_services()
-            service = services.get_service(self.service_uuid)
+            services = self.client.services
+            if services:
+                logger.debug(
+                    "Discovered services: %s",
+                    [(s.uuid, [c.uuid for c in s.characteristics]) for s in services]
+                )
+            else:
+                logger.warning("No services discovered!")
+
+            # Known OBD adapter service UUIDs to try
+            KNOWN_SERVICE_UUIDS = [
+                # LeLink
+                ("0000ffe0-0000-1000-8000-00805f9b34fb", "0000ffe1-0000-1000-8000-00805f9b34fb", "0000ffe1-0000-1000-8000-00805f9b34fb"),
+                # Veepeak/Vgate (fff1=notify/read, fff2=write)
+                ("0000fff0-0000-1000-8000-00805f9b34fb", "0000fff1-0000-1000-8000-00805f9b34fb", "0000fff2-0000-1000-8000-00805f9b34fb"),
+                # Veepeak/Vgate alternate (some use fff1 for both)
+                ("0000fff0-0000-1000-8000-00805f9b34fb", "0000fff1-0000-1000-8000-00805f9b34fb", "0000fff1-0000-1000-8000-00805f9b34fb"),
+                # Nordic UART Service
+                ("6e400001-b5a3-f393-e0a9-e50e24dcca9e", "6e400003-b5a3-f393-e0a9-e50e24dcca9e", "6e400002-b5a3-f393-e0a9-e50e24dcca9e"),
+            ]
+
+            # First try the configured service UUID
+            service = services.get_service(self.service_uuid) if services else None
+
+            # If not found, try known OBD adapter services
+            if service is None and services:
+                logger.debug("Configured service %s not found, trying known OBD services", self.service_uuid)
+                for svc_uuid, read_uuid, write_uuid in KNOWN_SERVICE_UUIDS:
+                    service = services.get_service(svc_uuid)
+                    if service:
+                        logger.info("Auto-detected OBD service: %s", svc_uuid)
+                        self.service_uuid = svc_uuid
+                        self.characteristic_uuid_read = read_uuid
+                        self.characteristic_uuid_write = write_uuid
+                        break
+
             read_char = None
             write_char = None
             if service:
@@ -151,6 +187,8 @@ class bleserial:
 
     async def write(self, data):
         """Write bytes."""
+        if self.client is None or self._write_char is None:
+            raise BleakError("Port not connected")
         if isinstance(data, str):
             data = data.encode()
         try:
